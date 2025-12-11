@@ -20,28 +20,36 @@
       padding: 50px 20px;
     }
 
-    body::before {
+    /* دوائر الخلفية مع التحريك */
+    body::before, body::after {
       content: '';
       position: absolute;
+      border-radius: 50%;
+      z-index: 0;
+      animation: float 15s ease-in-out infinite alternate;
+    }
+
+    body::before {
       width: 800px;
       height: 800px;
       background: rgba(255,255,255,0.2);
-      border-radius: 50%;
       top: -200px;
       left: -200px;
-      z-index: 0;
     }
 
     body::after {
-      content: '';
-      position: absolute;
       width: 500px;
       height: 500px;
       background: rgba(255,255,255,0.15);
-      border-radius: 50%;
       bottom: -150px;
       right: -150px;
-      z-index: 0;
+      animation-delay: 7s;
+    }
+
+    @keyframes float {
+      0% { transform: translate(0,0) }
+      50% { transform: translate(20px, 20px) }
+      100% { transform: translate(-20px, -20px) }
     }
 
     .container {
