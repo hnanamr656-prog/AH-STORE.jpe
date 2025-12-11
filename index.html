@@ -1,110 +1,129 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AH STORE - الصفحة الرئيسية</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a; /* خلفية غامقة */
-            color: #fff; /* نص أبيض */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AH STORE</title>
 
-        .banner img {
-            width: 250px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            animation: slideIn 1.5s ease-in-out;
-        }
+<style>
+    body {
+        margin: 0;
+        padding: 20px;
+        font-family: "Tajawal", sans-serif;
+        background-color: #c8b293; /* بيج غامق */
+        text-align: center;
+    }
 
-        h1 {
-            color: #ff6f61;
-            margin-bottom: 10px;
-        }
+    .logo {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        margin: 20px auto;
+        object-fit: cover;
+        border: 3px solid white;
+    }
 
-        p.description {
-            margin-bottom: 30px;
-            font-size: 16px;
-            color: #ddd;
-            max-width: 600px;
-            line-height: 1.6;
-        }
+    h1 {
+        margin-top: 10px;
+        font-size: 26px;
+        color: #2f2a23;
+    }
 
-        ul {
-            list-style: none;
-            padding: 0;
-            width: 100%;
-            max-width: 400px;
-            text-align: right;
-        }
+    .desc {
+        font-size: 17px;
+        color: #443f38;
+        margin-bottom: 20px;
+        line-height: 1.8;
+    }
 
-        ul li {
-            margin: 12px 0;
-            background: #333; /* خلفية لكل رابط */
-            padding: 12px 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
+    .icon-row {
+        font-size: 30px;
+        margin: 15px 0;
+    }
 
-        ul li a {
-            text-decoration: none;
-            color: #ff6f61;
-            font-weight: bold;
-        }
+    .icon-row a {
+        margin: 0 10px;
+        color: #2f2a23;
+        text-decoration: none;
+    }
 
-        ul li a:hover {
-            color: #e65b50;
-        }
+    .card {
+        background: #e9dcc3;
+        padding: 15px;
+        border-radius: 20px;
+        margin: 15px 0;
+        border: 2px solid #d2c0a5;
+        cursor: pointer;
+        text-decoration: none;
+        color: #2f2a23;
+        font-size: 20px;
+        display: block;
+    }
 
-        @keyframes slideIn {
-            0% {opacity:0; transform:scale(1.2);}
-            100% {opacity:1; transform:scale(1);}
-        }
-    </style>
+    .card:hover {
+        background: #f3e7d3;
+    }
+
+    .small-img {
+        width: 60px;
+        border-radius: 50%;
+        vertical-align: middle;
+        margin-left: 10px;
+    }
+
+    .banner {
+        width: 90%;
+        border-radius: 20px;
+        margin: 15px auto;
+    }
+</style>
 </head>
+
 <body>
 
-    <!-- بانر صورة الشركة -->
-    <div class="banner">
-        <img src="AH_STORE.jpeg" alt="AH STORE">
-    </div>
+    <!-- اللوجو -->
+    <img src="images/logo.jpg" class="logo" alt="AH STORE">
 
-    <h1>AH STORE</h1>
+    <!-- عنوان + وصف -->
+    <h1>AH STORE للأزياء والمنتجات المنزلية</h1>
 
-    <!-- تعريف الشركة الجديد -->
-    <p class="description">
-        مرحبًا بكم في <strong>AH STORE</strong> – وجهتكم الأولى لأحدث منتجات الرجال والنساء!  
-        نقدم لكم تشكيلات مميزة من الملابس العصرية والجودة العالية بأسعار تنافسية.  
-        نسعى لتوفير تجربة شراء سهلة وممتعة، مع دعم مباشر عبر واتساب وقنواتنا الرسمية.  
-        اكتشفوا منتجاتنا، تابعوا قنواتنا، وتواصلوا معنا بكل سهولة!
+    <p class="desc">
+        ✨ نختار لكِ أجود الخامات وأحدث الموديلات  
+        ✨ تسوّقي الآن واكتشفي عالم من الأناقة  
     </p>
 
-    <ul>
-        <!-- رقم واتساب للتواصل -->
-        <li><a href="https://wa.me/201282749945" target="_blank">واتساب مباشر: +20 1282749945</a></li>
+    <!-- صورة بنر -->
+    <img src="images/banner.jpg" class="banner" alt="AH STORE Banner">
 
-        <!-- قنوات واتساب -->
-        <li><a href="https://whatsapp.com/channel/0029VanMJrZ3rZZYKVjgzd1c" target="_blank">قناة واتساب 1</a></li>
-        <li><a href="https://whatsapp.com/channel/0029VajD1a60VycE7t7Wik2W" target="_blank">قناة واتساب 2</a></li>
-        <li><a href="https://whatsapp.com/channel/0029VawlIEnKbYMSBkkidO0g" target="_blank">قناة واتساب 3</a></li>
-        <li><a href="https://whatsapp.com/channel/0029VanZtTe3LdQWMAanFF1F" target="_blank">قناة واتساب 4</a></li>
+    <!-- روابط السوشيال -->
+    <div class="icon-row">
+        <a href="#">📸</a>
+        <a href="#">📘</a>
+        <a href="#">🎵</a>
+        <a href="#">💬</a>
+        <a href="#">📢</a>
+    </div>
 
-        <!-- قنوات تليجرام -->
-        <li><a href="https://t.me/+EiFjyY61P9w2YzA0" target="_blank">قناة تليجرام 1</a></li>
-        <li><a href="https://t.me/+aStkOZ1UQu02MWE8" target="_blank">قناة تليجرام 2</a></li>
-        <li><a href="https://t.me/+NpUVbIkrMW5hMTJk" target="_blank">قناة تليجرام 3</a></li>
-        <li><a href="https://t.me/+PSCP3d-hn1YyMGVk" target="_blank">قناة تليجرام 4</a></li>
-        <li><a href="https://t.me/+2eE8uZFBbyxlOTNk" target="_blank">قناة تليجرام 5</a></li>
+    <!-- الأزرار -->
+    <a href="https://t.me/+EiFjyY61P9w2YzA0" class="card">
+        <img src="images/logo.jpg" class="small-img"> قناة المنتجات (1)
+    </a>
 
-        <!-- صفحة فيسبوك -->
-        <li><a href="https://www.facebook.com/share/17767r1nUB/" target="_blank">فيسبوك الشركة</a></li>
-    </ul>
+    <a href="https://t.me/+aStkOZ1UQu02MWE8" class="card">
+        <img src="images/logo.jpg" class="small-img"> قناة المنتجات (2)
+    </a>
+
+    <a href="https://t.me/+NpUVbIkrMW5hMTJk" class="card">
+        <img src="images/logo.jpg" class="small-img"> قناة المنتجات (3)
+    </a>
+
+    <a href="https://t.me/+PSCP3d-hn1YyMGVk" class="card">
+        <img src="images/logo.jpg" class="small-img"> قناة المنتجات (4)
+    </a>
+
+    <a href="https://t.me/+2eE8uZFBbyxlOTNk" class="card">
+        <img src="images/logo.jpg" class="small-img"> قناة المنتجات (5)
+    </a>
 
 </body>
 </html>
