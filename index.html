@@ -1,165 +1,486 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AH STORE</title>
-
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>AH STORE - روابط التواصل</title>
 <style>
-    body {
-        margin: 0;
-        padding: 20px;
-        font-family: "Tajawal", sans-serif;
-        background-color: #c8b293; /* بيج غامق */
-        text-align: center;
-    }
+  :root{
+    --bg: #c8b293;    /* بيج */
+    --card: #e9dcc3;  /* لون أزرار */
+    --accent: #2f2a23;/* لون نص */
+    --accent-2:#ff6f61;/* لون بارز */
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: "Tajawal", Arial, sans-serif;
+    background:var(--bg);
+    color:var(--accent);
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    padding:24px 12px;
+    min-height:100vh;
+  }
 
-    .logo {
-        width: 140px;
-        height: 140px;
-        border-radius: 50%;
-        margin: 20px auto;
-        object-fit: cover;
-        border: 3px solid white;
-    }
+  .container{
+    width:100%;
+    max-width:520px;
+  }
 
-    h1 {
-        font-size: 26px;
-        color: #2f2a23;
-        margin-top: 5px;
-    }
+  .card-top{
+    background:transparent;
+    text-align:center;
+    margin-bottom:14px;
+  }
 
-    .desc {
-        font-size: 17px;
-        color: #443f38;
-        line-height: 1.8;
-    }
+  .logo{
+    width:140px;height:140px;border-radius:50%;
+    object-fit:cover;border:4px solid #fff;
+    display:block;margin:12px auto;
+    box-shadow:0 6px 18px rgba(0,0,0,0.12);
+  }
 
-    .banner {
-        width: 90%;
-        border-radius: 20px;
-        margin: 15px auto;
-    }
+  h1{
+    margin:6px 0 6px;font-size:24px;color:var(--accent);
+    letter-spacing:0.3px;
+  }
 
-    .card {
-        background: #e9dcc3;
-        padding: 15px;
-        border-radius: 20px;
-        margin: 12px 0;
-        border: 2px solid #d2c0a5;
-        text-decoration: none;
-        color: #2f2a23;
-        font-size: 19px;
-        display: block;
-        text-align: right;
-        padding-right: 20px;
-    }
+  .desc{
+    color:#443f38;
+    max-width:86%;
+    margin:6px auto 14px;
+    line-height:1.6;
+    font-size:15px;
+  }
 
-    .card:hover {
-        background: #f3e7d3;
-    }
+  .banner {
+    width:100%;
+    border-radius:16px;
+    overflow:hidden;
+    margin:10px auto 18px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  }
+  .banner img{width:100%; display:block; height:auto; object-fit:cover;}
 
-    .small-img {
-        width: 55px;
-        border-radius: 50%;
-        vertical-align: middle;
-        margin-left: 10px;
-    }
+  .section-title{
+    display:inline-block;
+    color:var(--accent);
+    background:transparent;
+    margin:10px 6px 8px;
+    font-weight:700;font-size:18px;
+    padding-bottom:4px;border-bottom:2px solid rgba(47,42,35,0.12);
+  }
 
-    .section-title {
-        margin-top: 25px;
-        font-size: 22px;
-        font-weight: bold;
-        color: #2f2a23;
-        border-bottom: 2px solid #2f2a23;
-        display: inline-block;
-        padding-bottom: 5px;
-    }
+  .links{
+    margin-top:8px;
+  }
 
-    .whatsapp-number {
-        font-size: 20px;
-        margin-top: 25px;
-        color: #1f1b17;
-        font-weight: bold;
-    }
+  .link-btn{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    background:var(--card);
+    color:var(--accent);
+    text-decoration:none;
+    padding:14px 16px;
+    border-radius:28px;
+    margin:10px 0;
+    border:2px solid rgba(210,192,165,0.9);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    transition:transform .12s, background .12s;
+    font-size:17px;
+  }
+  .link-btn:hover{ transform:translateY(-4px); background:#f3e7d3; }
+
+  .link-left{
+    display:flex; align-items:center; gap:12px; text-align:right;
+  }
+
+  .small-logo{
+    width:54px; height:54px; border-radius:50%; object-fit:cover; border:2px solid #fff;
+  }
+
+  .link-label{ font-weight:700; color:var(--accent); }
+
+  .link-sub{ font-size:13px; color:#6b645b; margin-top:4px; }
+
+  .whatsapp-box{
+    margin-top:18px;
+    text-align:center;
+    color:var(--accent);
+    font-weight:700;
+  }
+
+  .whatsapp-num{
+    font-size:20px;
+    color:var(--accent-2);
+    display:block;
+    margin-top:6px;
+  }
+
+  /* responsive */
+  @media(max-width:420px){
+    .logo{width:120px;height:120px}
+    .small-logo{width:46px;height:46px}
+    .link-btn{padding:12px;font-size:16px;border-radius:22px}
+  }
 </style>
 </head>
-
 <body>
+  <div class="container">
 
-    <!-- اللوجو -->
-    <img src="images/logo.jpg" class="logo" alt="AH STORE">
+    <!-- Header -->
+    <div class="card-top">
+      <!-- ضعّي لوجو داخل images/logo.jpg -->
+      <img src="images/logo.jpg" alt="AH STORE" class="logo" onerror="this.style.display='none'">
+      <h1>AH STORE</h1>
 
-    <!-- عنوان + وصف -->
-    <h1>AH STORE</h1>
+      <p class="desc">
+        ✨ عالم كامل من الموضة لكل أفراد الأسرة — حريمي، رجالي، أطفال، أدوات منزلية ومستحضرات تجميل.<br>
+        ✨ تشكيلات متجددة، جودة ممتازة، ودعم مباشر عبر واتساب.
+      </p>
 
-    <p class="desc">
-        ✨ عالم كامل من الموضة لكل أفراد الأسرة  
-        ✨ ملابس حريمي – رجالي – أطفال  
-        ✨ شحن سريع – جودة ممتازة  
-    </p>
-
-    <!-- صورة بنر -->
-    <img src="images/banner.jpg" class="banner" alt="AH STORE Banner">
-
-
-    <!-- واتساب -->
-    <div class="section-title">قنوات واتساب</div>
-
-    <a href="https://whatsapp.com/channel/0029VanMJrZ3rZZYKVjgzd1c" class="card">
-        القناة الرئيسية
-    </a>
-
-    <a href="https://whatsapp.com/channel/0029VajD1a60VycE7t7Wik2W" class="card">
-        قناه ملابس كاجوال حريمي 1
-    </a>
-
-    <a href="https://whatsapp.com/channel/0029VawlIEnKbYMSBkkidO0g" class="card">
-        قناه ملابس كاجوال 2
-    </a>
-
-    <a href="https://whatsapp.com/channel/0029Vb48qzsKrWQyE2DjA73e" class="card">
-        قناه ملابس كاجوال 3
-    </a>
-
-    <a href="https://whatsapp.com/channel/0029VanZtTe3LdQWMAanFF1F" class="card">
-        قناه ملابس رجالي
-    </a>
-
-    <a href="https://whatsapp.com/channel/0029VaifXglKWEKsxbgw2408" class="card">
-        قناه ملابس أطفال
-    </a>
-
-
-    <!-- تليجرام -->
-    <div class="section-title">قنوات تليجرام</div>
-
-    <a href="https://t.me/+cvQqcfpfEm45ZDRk" class="card">
-        قناه ملابس كاجوال حريمي 1
-    </a>
-
-    <a href="https://t.me/+2eE8uZFBbyxlOTNk" class="card">
-        قناه ملابس كاجوال 2
-    </a>
-
-    <a href="https://t.me/+PSCP3d-hn1YyMGVk" class="card">
-        قناه ملابس كاجوال 3
-    </a>
-
-    <a href="https://t.me/+NpUVbIkrMW5hMTJk" class="card">
-        قناه ملابس رجالي
-    </a>
-
-    <a href="https://t.me/+VyjgwabrB9JmMmJk" class="card">
-        قناه ملابس أطفال
-    </a>
-
-
-    <!-- رقم الواتس -->
-    <div class="whatsapp-number">
-        رقم الواتس للتواصل: <br>
-        <span style="font-size:22px;">01282749945</span>
+      <!-- بانر اختياري داخل images/banner.jpg -->
+      <div class="banner"><img src="images/banner.jpg" alt="AH STORE Banner" onerror="this.style.display='none'"></div>
     </div>
 
+    <!-- روابط واتساب -->
+    <div class="section">
+      <div class="section-title">قنوات واتساب</div>
+      <div class="links">
+
+        <a class="link-btn" href="https://whatsapp.com/channel/0029VanMJrZ3rZZYKVjgzd1c" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">القناة الرئيسية</div>
+              <div class="link-sub">أحدث الإعلانات والعروض</div>
+            </div>
+          </div>
+          <div>💬</div>
+        </a>
+
+        <a class="link-btn" href="https://whatsapp.com/channel/0029VajD1a60VycE7t7Wik2W" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه ملابس كاجوال حريمي 1</div>
+              <div class="link-sub">ملابس كاجوال مميزة</div>
+            </div>
+          </div>
+          <div>👗</div>
+        </a>
+
+        <a class="link-btn" href="https://whatsapp.com/channel/0029VawlIEnKbYMSBkkidO0g" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه ملابس كاجوال 2</div>
+              <div class="link-sub">تشكيلات يومية</div>
+            </div>
+          </div>
+          <div>👚</div>
+        </a>
+
+        <a class="link-btn" href="https://whatsapp.com/channel/0029Vb48qzsKrWQyE2DjA73e" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه ملابس كاجوال 3</div>
+              <div class="link-sub">موديلات جديدة</div>
+            </div>
+          </div>
+          <div>🛍️</div>
+        </a>
+
+        <a class="link-btn" href="https://whatsapp.com/channel/0029VanZtTe3LdQWMAanFF1F" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه ملابس رجالي</div>
+              <div class="link-sub">ملابس وشوز رجالي</div>
+            </div>
+          </div>
+          <div>👔</div>
+        </a>
+
+        <a class="link-btn" href="https://whatsapp.com/channel/0029VaifXglKWEKsxbgw2408" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه ملابس أطفال</div>
+              <div class="link-sub">اطفال — ملابس مريحة</div>
+            </div>
+          </div>
+          <div>🧸</div>
+        </a>
+
+        <a class="link-btn" href="https://whatsapp.com/channel/0029Vb3OwPnIiRowIALxEZ0G" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه ملابس العبايات</div>
+            </div>
+          </div>
+          <div>🧕</div>
+        </a>
+
+        <a class="link-btn" href="https://whatsapp.com/channel/0029VakLXEHDOQIgmawF8F0F" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناة الانجري</div>
+            </div>
+          </div>
+          <div>🩱</div>
+        </a>
+
+        <a class="link-btn" href="https://whatsapp.com/channel/0029VakO66F0LKZ4popzGF33" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناة المفروشات</div>
+            </div>
+          </div>
+          <div>🛏️</div>
+        </a>
+
+        <a class="link-btn" href="https://whatsapp.com/channel/0029VaikGfMJUM2fGVeZ5Y3y" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناة أدوات منزلية</div>
+            </div>
+          </div>
+          <div>🏺</div>
+        </a>
+
+        <a class="link-btn" href="https://whatsapp.com/channel/0029VajaHqVG3R3kgSs9Jh0j" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناة مستحضرات تجميل</div>
+            </div>
+          </div>
+          <div>💄</div>
+        </a>
+
+        <a class="link-btn" href="https://whatsapp.com/channel/0029Vao1Q1HFXUuayMSC3G0H" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناة أثاث منزلي</div>
+            </div>
+          </div>
+          <div>🛋️</div>
+        </a>
+
+        <a class="link-btn" href="https://whatsapp.com/channel/0029VanjI6OFi8xZsKSw7u2g" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناة الإكسسوارات</div>
+            </div>
+          </div>
+          <div>📿</div>
+        </a>
+
+        <a class="link-btn" href="https://whatsapp.com/channel/0029VaoBLeL4CrfnHNc6ho1L" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناة الأجهزة الإلكترونية</div>
+            </div>
+          </div>
+          <div>🔌</div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- تليجرام -->
+    <div class="section">
+      <div class="section-title">قنوات تليجرام</div>
+      <div class="links">
+
+        <a class="link-btn" href="https://t.me/+cvQqcfpfEm45ZDRk" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه ملابس كاجوال حريمي 1</div>
+            </div>
+          </div>
+          <div>📢</div>
+        </a>
+
+        <a class="link-btn" href="https://t.me/+2eE8uZFBbyxlOTNk" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه ملابس كاجوال 2</div>
+            </div>
+          </div>
+          <div>📢</div>
+        </a>
+
+        <a class="link-btn" href="https://t.me/+PSCP3d-hn1YyMGVk" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه ملابس كاجوال 3</div>
+            </div>
+          </div>
+          <div>📢</div>
+        </a>
+
+        <a class="link-btn" href="https://t.me/+NpUVbIkrMW5hMTJk" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه ملابس رجالي</div>
+            </div>
+          </div>
+          <div>📢</div>
+        </a>
+
+        <a class="link-btn" href="https://t.me/+VyjgwabrB9JmMmJk" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه ملابس أطفال</div>
+            </div>
+          </div>
+          <div>📢</div>
+        </a>
+
+        <a class="link-btn" href="https://t.me/+WJX-vfT_n2thYmVk" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه الزي الشرعي</div>
+            </div>
+          </div>
+          <div>📢</div>
+        </a>
+
+        <a class="link-btn" href="https://t.me/+EiFjyY61P9w2YzA0" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه الانجري</div>
+            </div>
+          </div>
+          <div>📢</div>
+        </a>
+
+        <a class="link-btn" href="https://t.me/+ZXABIjMhp-VhZGI8" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه الشنط</div>
+            </div>
+          </div>
+          <div>📢</div>
+        </a>
+
+        <a class="link-btn" href="https://t.me/+S8jlor76U8JhMGU0" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه الأحذية</div>
+            </div>
+          </div>
+          <div>📢</div>
+        </a>
+
+        <a class="link-btn" href="https://t.me/+pk15fhIQGjFjOTdk" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه الاكسسوارت</div>
+            </div>
+          </div>
+          <div>📢</div>
+        </a>
+
+        <a class="link-btn" href="https://t.me/+rWY7DcPUNEZlNzY0" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه أدوات منزلية</div>
+            </div>
+          </div>
+          <div>📢</div>
+        </a>
+
+        <a class="link-btn" href="https://t.me/+I3b0UhiuZ640ZmU0" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه المفروشات</div>
+            </div>
+          </div>
+          <div>📢</div>
+        </a>
+
+        <a class="link-btn" href="https://t.me/+8kV2GwAkDUY1YjZk" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه الأثاث المنزلي</div>
+            </div>
+          </div>
+          <div>📢</div>
+        </a>
+
+        <a class="link-btn" href="https://t.me/+roCIFAkdw7c3MGM0" target="_blank" rel="noopener">
+          <div class="link-left">
+            <img src="images/logo.jpg" class="small-logo" alt="">
+            <div style="text-align:right;">
+              <div class="link-label">قناه مستحضرات تجميل</div>
+            </div>
+          </div>
+          <div>📢</div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- صفحة فيسبوك و تيك توك -->
+    <div style="margin-top:18px;">
+      <a class="link-btn" href="https://www.facebook.com/share/1DjMcNSTGw/" target="_blank" rel="noopener">
+        <div class="link-left">
+          <img src="images/logo.jpg" class="small-logo" alt="">
+          <div style="text-align:right;">
+            <div class="link-label">صفحة الفيسبوك</div>
+            <div class="link-sub">تابعنا على فيسبوك</div>
+          </div>
+        </div>
+        <div>📘</div>
+      </a>
+
+      <a class="link-btn" href="https://www.tiktok.com/@ahstore48?_r=1&_t=ZS-927QafrEYia" target="_blank" rel="noopener">
+        <div class="link-left">
+          <img src="images/logo.jpg" class="small-logo" alt="">
+          <div style="text-align:right;">
+            <div class="link-label">تيك توك</div>
+            <div class="link-sub">@ahstore48</div>
+          </div>
+        </div>
+        <div>🎵</div>
+      </a>
+    </div>
+
+    <!-- رقم واتساب للتواصل -->
+    <div class="whatsapp-box">
+      رقم التواصل عبر واتساب:
+      <div class="whatsapp-num">+20 1282749945</div>
+      <div style="margin-top:8px;font-size:14px;color:#5d564f;">اضغط على أي قناة للانضمام أو تواصل مباشر عبر رقمنا</div>
+    </div>
+
+  </div>
 </body>
 </html>
