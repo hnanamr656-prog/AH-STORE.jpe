@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: 'Cairo', sans-serif;
-      background: linear-gradient(135deg, #f5f0eb, #e9e3d7);
+      background: linear-gradient(135deg, #d1c2b0, #bca58a); /* بيج غامق */
       min-height: 100vh;
       display: flex;
       justify-content: center;
@@ -20,36 +20,29 @@
       padding: 50px 20px;
     }
 
-    /* دوائر الخلفية مع التحريك */
-    body::before, body::after {
+    /* دوائر الخلفية */
+    body::before {
       content: '';
       position: absolute;
-      border-radius: 50%;
-      z-index: 0;
-      animation: float 15s ease-in-out infinite alternate;
-    }
-
-    body::before {
       width: 800px;
       height: 800px;
-      background: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
       top: -200px;
       left: -200px;
+      z-index: 0;
     }
 
     body::after {
+      content: '';
+      position: absolute;
       width: 500px;
       height: 500px;
-      background: rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
       bottom: -150px;
       right: -150px;
-      animation-delay: 7s;
-    }
-
-    @keyframes float {
-      0% { transform: translate(0,0) }
-      50% { transform: translate(20px, 20px) }
-      100% { transform: translate(-20px, -20px) }
+      z-index: 0;
     }
 
     .container {
@@ -74,30 +67,29 @@
       line-height: 1.8;
     }
 
-    .link-list {
-      margin-bottom: 30px;
-    }
-
-    .link-list h3 {
-      font-size: 20px;
-      margin-bottom: 12px;
-      color: #333;
-      font-weight: 700;
-    }
-
-    .link-list a {
+    .channel {
       display: block;
-      margin: 6px 0;
+      background-color: #fff;
+      margin: 8px 0;
+      padding: 12px 15px;
+      border-radius: 10px;
       text-decoration: none;
-      font-size: 17px;
       color: #333;
-      padding: 8px 12px;
-      border-radius: 6px;
+      font-size: 17px;
+      font-weight: 500;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       transition: 0.3s;
     }
 
-    .link-list a:hover {
+    .channel:hover {
       background-color: rgba(0,0,0,0.05);
+    }
+
+    .section-title {
+      font-size: 20px;
+      margin: 20px 0 10px 0;
+      font-weight: 700;
+      color: #333;
     }
 
     .social {
@@ -113,6 +105,8 @@
       padding: 8px 12px;
       border-radius: 6px;
       transition: 0.3s;
+      background-color: #fdfdfd;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .social a:hover {
@@ -143,7 +137,7 @@
       h1 {
         font-size: 36px;
       }
-      p, .link-list a, .social a {
+      p, .channel, .social a {
         font-size: 16px;
       }
       .whatsapp-button {
@@ -157,48 +151,25 @@
   <div class="container">
     <h1>AH STORE</h1>
     <p>
-      نعمل على تقديم أفضل المنتجات للرجال والنساء والأطفال بجودة عالية وخدمة سريعة.  
-      اكتشف مجموعتنا المتنوعة من الملابس، الأحذية، الشنط، الإكسسوارات، والمزيد لكل أفراد العائلة.  
-      هدفنا هو راحتك ورضاك عن كل منتج تختاره من AH STORE.
+      نقدم أفضل المنتجات للرجال والنساء والأطفال بجودة عالية وخدمة سريعة.  
+      اكتشف تشكيلتنا المتنوعة من الملابس، الأحذية، الشنط، الإكسسوارات، والمزيد لكل أفراد العائلة.
     </p>
 
-    <div class="link-list">
-      <h3>قنوات واتساب</h3>
-      <a href="https://whatsapp.com/channel/0029VanMJrZ3rZZYKVjgzd1c" target="_blank">القناة الرئيسية</a>
-      <a href="https://whatsapp.com/channel/0029VajD1a60VycE7t7Wik2W" target="_blank">ملابس كاجوال حريمي 1</a>
-      <a href="https://whatsapp.com/channel/0029VawlIEnKbYMSBkkidO0g" target="_blank">ملابس كاجوال 2</a>
-      <a href="https://whatsapp.com/channel/0029Vb48qzsKrWQyE2DjA73e" target="_blank">ملابس كاجوال 3</a>
-      <a href="https://whatsapp.com/channel/0029VanZtTe3LdQWMAanFF1F" target="_blank">ملابس رجالي</a>
-      <a href="https://whatsapp.com/channel/0029VaifXglKWEKsxbgw2408" target="_blank">ملابس أطفال</a>
-      <a href="https://whatsapp.com/channel/0029Vb3OwPnIiRowIALxEZ0G" target="_blank">ملابس العبايات</a>
-      <a href="https://whatsapp.com/channel/0029VakLXEHDOQIgmawF8F0F" target="_blank">الانجيري</a>
-      <a href="https://whatsapp.com/channel/0029VakO66F0LKZ4popzGF33" target="_blank">المفروشات</a>
-      <a href="https://whatsapp.com/channel/0029VaikGfMJUM2fGVeZ5Y3y" target="_blank">أدوات منزلية</a>
-      <a href="https://whatsapp.com/channel/0029VajaHqVG3R3kgSs9Jh0j" target="_blank">مستحضرات تجميل</a>
-      <a href="https://whatsapp.com/channel/0029Vaj7LHfJENy3x6OQ610C" target="_blank">الأحذية</a>
-      <a href="https://whatsapp.com/channel/0029VanbODS1NCrahnwJdl40" target="_blank">الشنط</a>
-      <a href="https://whatsapp.com/channel/0029Vao1Q1HFXUuayMSC3G0H" target="_blank">أثاث منزلي</a>
-      <a href="https://whatsapp.com/channel/0029VanjI6OFi8xZsKSw7u2g" target="_blank">الإكسسوارات</a>
-      <a href="https://whatsapp.com/channel/0029VaoBLeL4CrfnHNc6ho1L" target="_blank">الأجهزة الإلكترونية</a>
-    </div>
+    <div class="section-title">قنوات واتساب</div>
+    <a href="https://whatsapp.com/channel/0029VanMJrZ3rZZYKVjgzd1c" target="_blank" class="channel">القناة الرئيسية</a>
+    <a href="https://whatsapp.com/channel/0029VajD1a60VycE7t7Wik2W" target="_blank" class="channel">ملابس كاجوال حريمي 1</a>
+    <a href="https://whatsapp.com/channel/0029VawlIEnKbYMSBkkidO0g" target="_blank" class="channel">ملابس كاجوال 2</a>
+    <a href="https://whatsapp.com/channel/0029Vb48qzsKrWQyE2DjA73e" target="_blank" class="channel">ملابس كاجوال 3</a>
+    <a href="https://whatsapp.com/channel/0029VanZtTe3LdQWMAanFF1F" target="_blank" class="channel">ملابس رجالي</a>
+    <a href="https://whatsapp.com/channel/0029VaifXglKWEKsxbgw2408" target="_blank" class="channel">ملابس أطفال</a>
+    <a href="https://whatsapp.com/channel/0029Vb3OwPnIiRowIALxEZ0G" target="_blank" class="channel">ملابس العبايات</a>
 
-    <div class="link-list">
-      <h3>قنوات التليجرام</h3>
-      <a href="https://t.me/+cvQqcfpfEm45ZDRk" target="_blank">ملابس كاجوال حريمي 1</a>
-      <a href="https://t.me/+2eE8uZFBbyxlOTNk" target="_blank">ملابس كاجوال 2</a>
-      <a href="https://t.me/+PSCP3d-hn1YyMGVk" target="_blank">ملابس كاجوال 3</a>
-      <a href="https://t.me/+NpUVbIkrMW5hMTJk" target="_blank">ملابس رجالي</a>
-      <a href="https://t.me/+VyjgwabrB9JmMmJk" target="_blank">ملابس أطفال</a>
-      <a href="https://t.me/+WJX-vfT_n2thYmVk" target="_blank">الزي الشرعي</a>
-      <a href="https://t.me/+EiFjyY61P9w2YzA0" target="_blank">الانجيري</a>
-      <a href="https://t.me/+ZXABIjMhp-VhZGI8" target="_blank">الشنط</a>
-      <a href="https://t.me/+S8jlor76U8JhMGU0" target="_blank">الأحذية</a>
-      <a href="https://t.me/+pk15fhIQGjFjOTdk" target="_blank">الإكسسوارات</a>
-      <a href="https://t.me/+rWY7DcPUNEZlNzY0" target="_blank">أدوات منزلية</a>
-      <a href="https://t.me/+I3b0UhiuZ640ZmU0" target="_blank">المفروشات</a>
-      <a href="https://t.me/+8kV2GwAkDUY1YjZk" target="_blank">أثاث منزلي</a>
-      <a href="https://t.me/+roCIFAkdw7c3MGM0" target="_blank">مستحضرات تجميل</a>
-    </div>
+    <div class="section-title">قنوات التليجرام</div>
+    <a href="https://t.me/+cvQqcfpfEm45ZDRk" target="_blank" class="channel">ملابس كاجوال حريمي 1</a>
+    <a href="https://t.me/+2eE8uZFBbyxlOTNk" target="_blank" class="channel">ملابس كاجوال 2</a>
+    <a href="https://t.me/+PSCP3d-hn1YyMGVk" target="_blank" class="channel">ملابس كاجوال 3</a>
+    <a href="https://t.me/+NpUVbIkrMW5hMTJk" target="_blank" class="channel">ملابس رجالي</a>
+    <a href="https://t.me/+VyjgwabrB9JmMmJk" target="_blank" class="channel">ملابس أطفال</a>
 
     <div class="social">
       <a href="https://www.facebook.com/share/1DjMcNSTGw/" target="_blank">تابعونا على الفيسبوك</a>
