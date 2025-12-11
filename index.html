@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AH STORE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Cairo', sans-serif;
       background: linear-gradient(135deg, #f5f0eb, #e9e3d7);
       min-height: 100vh;
       display: flex;
@@ -16,10 +17,9 @@
       text-align: center;
       position: relative;
       overflow-x: hidden;
-      padding: 40px 20px;
+      padding: 50px 20px;
     }
 
-    /* دوائر الخلفية */
     body::before {
       content: '';
       position: absolute;
@@ -31,6 +31,7 @@
       left: -200px;
       z-index: 0;
     }
+
     body::after {
       content: '';
       position: absolute;
@@ -52,30 +53,38 @@
     }
 
     h1 {
-      font-size: 36px;
+      font-size: 42px;
       margin-bottom: 15px;
       color: #333;
+      font-weight: 700;
     }
 
     p {
-      font-size: 18px;
-      margin-bottom: 25px;
+      font-size: 20px;
+      margin-bottom: 30px;
       color: #555;
-      line-height: 1.6;
+      line-height: 1.8;
     }
 
     .link-list {
       margin-bottom: 30px;
     }
 
+    .link-list h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #333;
+      font-weight: 700;
+    }
+
     .link-list a {
       display: block;
       margin: 6px 0;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 17px;
       color: #333;
-      padding: 6px 10px;
-      border-radius: 5px;
+      padding: 8px 12px;
+      border-radius: 6px;
       transition: 0.3s;
     }
 
@@ -84,17 +93,17 @@
     }
 
     .social {
-      margin: 20px 0;
+      margin: 25px 0;
     }
 
     .social a {
       display: block;
       margin: 6px 0;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 17px;
       color: #333;
-      padding: 6px 10px;
-      border-radius: 5px;
+      padding: 8px 12px;
+      border-radius: 6px;
       transition: 0.3s;
     }
 
@@ -105,12 +114,13 @@
     .whatsapp-button {
       display: inline-block;
       margin-top: 30px;
-      padding: 12px 25px;
+      padding: 14px 28px;
       background-color: #25D366;
       color: white;
       text-decoration: none;
-      border-radius: 8px;
-      font-size: 18px;
+      border-radius: 10px;
+      font-size: 20px;
+      font-weight: 700;
       transition: 0.3s;
     }
 
@@ -122,6 +132,16 @@
       .container {
         padding: 20px;
       }
+      h1 {
+        font-size: 36px;
+      }
+      p, .link-list a, .social a {
+        font-size: 16px;
+      }
+      .whatsapp-button {
+        font-size: 18px;
+        padding: 12px 22px;
+      }
     }
   </style>
 </head>
@@ -129,8 +149,9 @@
   <div class="container">
     <h1>AH STORE</h1>
     <p>
-      نقدم لك أفضل المنتجات للرجال، النساء، والأطفال بجودة عالية وخدمة سريعة.
-      اكتشف مجموعتنا المتنوعة من الملابس، الأحذية، الشنط، الإكسسوارات، والمزيد لكل أفراد العائلة.
+      نعمل على تقديم أفضل المنتجات للرجال والنساء والأطفال بجودة عالية وخدمة سريعة.  
+      اكتشف مجموعتنا المتنوعة من الملابس، الأحذية، الشنط، الإكسسوارات، والمزيد لكل أفراد العائلة.  
+      هدفنا هو راحتك ورضاك عن كل منتج تختاره من AH STORE.
     </p>
 
     <div class="link-list">
